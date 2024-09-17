@@ -68,3 +68,145 @@ body {
 .navbar .fas {
   margin-left: 5px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #eee;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+.card {
+    width: 280px;
+    max-width: 100%;
+    transition: all 0.5s ease;
+    z-index: 10;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin: 2% auto;
+    min-height: 520px; /* Altura mínima */
+    flex-grow: 1; /*¿necesario?*/
+    max-height: 100vh; /* Mantiene la card con el tamaño según la ventana*/
+}
+
+.card .backgroundEffect {
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background: #5C5C5C;
+    transition: all 0.5s ease-in;
+    z-index: -1;
+    border-top-left-radius: 80%;
+    border-top-right-radius: 80%;
+}
+
+.card:hover .backgroundEffect {
+    height: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.card .pic {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Evita que las imágenes se desborden */
+}
+
+.card .pic img {
+    width: 100%;
+    height: auto;
+    max-height: 30vh; /* Para limitar altura de las imágenes */
+    object-fit: cover; /* Mantiene las proporciones sin deformar */
+}
+
+.card .content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    flex-grow: 1;
+}
+
+.card .content .h-1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: clamp(18px, 2.5vw, 22px); /* Tamaños ajustados */
+}
+
+.card .content .text-muted {
+    font-size: clamp(16px, 1.5vw, 18px); /* Tamaños ajustados */
+    margin: 0;
+    line-height: 1.4; /* Mejora la legibilidad */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .card {
+        width: 95%;
+        margin: 5% auto;
+        max-height: none; /* Elimina la restricción de altura en pantallas medianas */
+    }
+
+    .card .pic img {
+        max-height: 40vh; /* Ajusta la altura máxima para pantallas medianas */
+    }
+
+    .card .content .h-1 {
+        font-size: clamp(16px, 3vw, 20px);
+    }
+
+    .card .content .text-muted {
+        font-size: clamp(12px, 2.5vw, 16px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        margin: 5% auto;
+        max-height: none; /* Elimina la restricción de altura en pantallas pequeñas */
+    }
+
+    .card .pic img {
+        max-height: 30vh; /* Ajusta la altura máxima para pantallas pequeñas */
+    }
+
+    .card .content {
+        padding: 4%;
+    }
+
+    .card .content .h-1 {
+        font-size: clamp(14px, 3vw, 18px);
+        margin-bottom: 4%;
+    }
+
+    .card .content .text-muted {
+        font-size: clamp(10px, 2vw, 14px);
+    }
+}
