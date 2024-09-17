@@ -1,0 +1,70 @@
+/* Aplicar la fuente "Roboto" a todo el documento */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos para la barra superior */
+.top-bar {
+  background-color: black;
+  color: white;
+  padding: 12px 0;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif; /* Aplicar Roboto */
+}
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif; /* Aplicar Roboto */
+}
+
+/* Estilos para la marca en el navbar */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 28px;
+  font-family: 'Roboto', sans-serif; /* Aplicar Roboto */
+}
+
+/* Espaciado en los elementos de la barra de navegación */
+.navbar-nav .nav-item {
+  margin-right: 5px;
+}
+
+/* Estilos para el campo de búsqueda */
+.form-inline .form-control {
+  width: 250px;
+}
+
+/* Estilos para los enlaces en la navbar */
+.nav-link {
+  color: #333;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif; /* Aplicar Roboto */
+}
+
+.nav-link:hover {
+  color: #55595c;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif; /* Aplicar Roboto */
+}
+
+/* Estilos para el botón de búsqueda */
+.btn-outline-success {
+  color: #474747;
+  border-color: #e6e6e6;
+  font-family: 'Roboto', sans-serif; /* Aplicar Roboto */
+}
+
+.btn-outline-success:hover {
+  background-color: #202220;
+  color: white;
+  font-family: 'Roboto', sans-serif; /* Aplicar Roboto */
+}
+
+/* Iconos y botones de la parte derecha */
+.navbar .fas {
+  margin-left: 5px;
+}
