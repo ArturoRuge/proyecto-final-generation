@@ -1,30 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 /* Aplicar la fuente "Roboto" a todo el documento */
 body {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #eee;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
+
 /* Estilos para la barra superior */
+.container-top-bar{
+  background-color: #D4C1EC;
+  width: 100%;
+}
 .top-bar {
-  background-color: black;
-  color: white;
+
+  color: #5C5C5Cte;
   padding: 12px 0;
   font-size: 20px;
-  font-family: 'Roboto', sans-serif; /* Aplicar Roboto */
 }
 
 .top-bar a {
-  color: white;
+  color: #5C5C5C;
   text-decoration: none;
   margin-right: 15px;
   font-size: 15px;
-  font-family: 'Roboto', sans-serif; /* Aplicar Roboto */
 }
 
 /* Estilos para la marca en el navbar */
+.navbar{
+  padding: 90px 70px;
+}
 .navbar-brand {
   font-weight: bold;
   font-size: 28px;
-  font-family: 'Roboto', sans-serif; /* Aplicar Roboto */
 }
 
 /* Espaciado en los elementos de la barra de navegación */
@@ -69,30 +84,18 @@ body {
   margin-left: 5px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+/* contenido nosotros */
+.nosotros{
+    margin-top: 70px;
+}
+.nosotros-h1{
+  margin-bottom: 70px ;
 }
 
-body {
-    margin: 0;
-    background-color: #eee;
+/* Nuestro Equipo */
+.nuestro-equipo{
+  margin: 70px 0;
 }
-
-.container {
-    min-height: 100vh;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 20px; /* Espacio entre tarjetas */
-}
-
 .card {
     width: 280px;
     max-width: 100%;
@@ -116,7 +119,7 @@ body {
     bottom: 0;
     height: 0;
     width: 100%;
-    background: #5C5C5C;
+    background: #E3E3E3;
     transition: all 0.5s ease-in;
     z-index: -1;
     border-top-left-radius: 80%;
@@ -140,8 +143,6 @@ body {
 .card .pic img {
     width: 100%;
     height: auto;
-    max-height: 30vh; /* Para limitar altura de las imágenes */
-    object-fit: cover; /* Mantiene las proporciones sin deformar */
 }
 
 .card .content {
@@ -164,6 +165,58 @@ body {
     margin: 0;
     line-height: 1.4; /* Mejora la legibilidad */
 }
+
+/* FOOTER */
+.footer-line{
+height: 3px;
+position: relative;
+top: 60px;
+background-color: #5C5C5C;
+z-index: 5;
+}
+.footer-logos{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+.footer-logos img{
+  width: 70px;
+  margin: 18px;
+}
+.footer{
+  text-align: center;
+  width: 100%;
+}
+.footer-email{
+  margin: 50px 0 70px;
+}
+.footer-email-input{
+  padding: 9px;
+  width: 30%;
+  border: 1px solid #5C5C5C;
+}
+.footer-email-button{
+  padding: 9px 18px;
+  margin-left: 18px;
+  background-color: #B5EAD7;
+  border: none;
+  border-radius: 25px ;
+}
+.footer-bar{
+  background-color: #5C5C5C;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  width: 100%;
+
+}
+.footer-bar a{
+  color: #fff;
+  margin-left: 18px;
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
