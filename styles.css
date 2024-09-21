@@ -237,6 +237,7 @@ z-index: 5;
     .card .content .text-muted {
         font-size: clamp(12px, 2.5vw, 16px);
     }
+   
 }
 
 @media (max-width: 480px) {
