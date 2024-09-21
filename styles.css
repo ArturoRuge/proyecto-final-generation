@@ -237,6 +237,9 @@ z-index: 5;
     .card .content .text-muted {
         font-size: clamp(12px, 2.5vw, 16px);
     }
+    .footer-email-input{
+      width: 60%;
+    }
 }
 
 @media (max-width: 480px) {
