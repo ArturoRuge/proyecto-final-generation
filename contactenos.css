@@ -37,14 +37,12 @@
 .form{
     margin: 70px 0
 }
-.form input{
+.form .form-input{
     width: 100%;
     padding: 9px;
-    margin: 9px 0;
 }
 .form textarea{
     width: 100%;
-    margin: 9px 0;
     padding: 9px;
 }
 .form-col2{
@@ -82,6 +80,7 @@
     border-radius: 25px ;
     width: 200px;
     font-size: 1.2rem;
+    color: #5C5C5C;
 }
 
 /* FOOTER */

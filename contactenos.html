@@ -98,16 +98,52 @@
   <section class="row form">
     <article class="col-12 col-lg-6 form-col1">
       <h2>Escríbenos un mensaje</h2>
-        <form action=" " method="post">  
-          <!-- <label for="name">nombre</label> -->
-          <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
-          <!-- <label for="email">email</label> -->
-          <input type="email" id="email" name="email" placeholder="Ingresa tu Email" required>
-          <input type="tel" id="tel" name="telefono" placeholder="Ingresa tu número de celular" required>
-          <!-- <label for="message">mensaje</label> -->
-          <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aqui!" required></textarea>
-          <button type="submit" class="button" >Enviar</button>
-      </form>
+
+<!-- Formulario de envio de mensaje  -->
+       
+      <form id="infoForm" action="https://formspree.io/f/meojbgpg" method="post" onsubmit="envioFormulario()" class="custom-form">
+          
+<!-- Nombres y apellidos -->
+         <div class="mb-3">
+            <label for="nameInput" class="form-label label-custom"></label>
+           <input type="text" class="form-control input-custom form-input" id="nameInput" placeholder="Escribe tu nombre y apellido" required>
+        </div>
+
+ <!-- Correo electrónico -->
+        <div class="mb-3">
+          <label for="emailInput" class="form-label label-custom"></label>
+          <input type="email" class="form-control input-custom form-input" id="emailInput" placeholder="Escribe tu correo electrónico" required>
+        </div>
+<!-- Selecciona código de país y número de teléfono -->
+        <div class="mb-3 d-flex align-items-center">
+          <select class="form-select me-2 input-custom" id="countrySelect" required>
+<!-- Países e indicativos en js -->
+          </select>
+            <input type="tel" class="form-control input-custom" id="phoneInput" placeholder="Escribe tu número de teléfono (sin indicativo de país)" pattern="[0-9]{10}" title="Ingrese un número de teléfono válido con 10 dígitos" required>
+         </div>
+
+<!-- area de mensaje -->
+
+         <div class="mb-3">
+          <label for="messageInput" class="form-label label-custom"></label>
+          <textarea id="messageInput" name="messageInput" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+        </div>
+
+                        <!-- Checkbox términos y condiciones -->
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="termsCheck" required>
+          <label class="form-check-label label-custom" for="termsCheck">
+           Acepto las política de tratamiento de datos. Clic aquí.</span>
+          </label>
+        </div>
+
+                              <!-- Botón del formulario -->  
+        <button type="submit" class="btn btn-primary btn-custom button" onclick="envioFormulario()">¡Enviar mensaje!</button>
+        </form>
+
+
+
+
     </article>
     <article class="col form-col2">
       <h2><a href="#">Soporte y ayuda</a></h2>
@@ -164,5 +200,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="contactenos.js"></script>
 </body>
 </html>
