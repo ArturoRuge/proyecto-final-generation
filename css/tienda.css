@@ -1,0 +1,28 @@
+.banner{
+    background-color: #B5EAD7;
+    padding: 50px 0;
+}
+.banner-text{
+    width: 70%;
+    
+}
+.filtros{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+.filtros-boton{
+    padding: 4px 12px;
+    background-color: #fff;
+    border: 1px solid #5C5C5C;
+    margin-left: 4px;
+}
+@media (max-width: 768px) {
+    .banner-text{
+        width: 100%;;
+    }
+    .filtros{
+        padding: 50px 10px;
+    }
+
+}
