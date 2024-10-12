@@ -39,16 +39,24 @@ document.getElementById('infoForm').addEventListener('submit', function (e) {
     if (errors.length > 0) {
       errorMessage.innerHTML = errors.join('<br>');
     } else {
+      // Codificar la contraseña
+      const passwordCodificada = btoa(password); // Codifica la contraseña
       // cuando no hay errores crear el objeto JSON del usuario
     const nuevoUsuario = {
         nombre: nombre,
         telefono: telefono,
         email: email,
-        password: password
+        password: passwordCodificada
       };
   
-      // Almacenar en localStorage
-      localStorage.setItem('usuario', JSON.stringify(nuevoUsuario));
+// Verificar si ya hay usuarios en localStorage
+let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+  
+// Agregar el nuevo usuario al array de usuarios
+usuarios.push(nuevoUsuario);
+
+// Almacenar el array de usuarios en localStorage
+localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
       alert('Usuario registrado exitosamente');
       //Resetea el formulario

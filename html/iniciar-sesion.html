@@ -3,7 +3,7 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Contáctenos</title>
+      <title>Iniciar Sesión</title>
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +32,7 @@
   <div class="top-bar text-center container">
     <span>10% off utilizando el código BIENVENIDO1</span>
     <a href="#" class="float-right mr-3">Soporte y ayuda</a>
+    <span id="messageIncluded"></span>
   </div>
 </div>
   <!-- Navbar -->
@@ -72,9 +73,10 @@
 <main>
     <section class="banner">
         <div class="banner-container container">
-        <h1 class="banner-title">Crea tu perfil y empieza a personalizar el chasis de tus sueños!</h1>
+        <h1 class="banner-title">¡Bienvenido de nuevo!
+        </h1>
     
-          <p class="banner-text">Bienvenido a Chasis Factory, el lugar donde tu imaginación cobra vida en cada chasis. En nuestra plataforma, puedes crear y personalizar tu chasis de computador como siempre lo soñaste. </p>  
+          <p class="banner-text">Accede a tu cuenta y sigue personalizando tu chasis perfecto.</p>  
       </div>
       </section>
 
@@ -83,28 +85,17 @@
   <section class="row form">
 
     <article class="col form-col2">
-        <img src="../pics/creacion-perfil-1.png" alt="">
+        <img src="../pics/inicio-sesion1.png" alt="">
       </article>
 
     <article class="col-12 col-lg-6 form-col1">
       <h2>Ingresa tus datos</h2>
 
-<!-- Formulario de envio de productos  -->
+<!-- Formulario de inicio de sesion  -->
 
 <form id="infoForm" class="custom-form">
           
-  <!-- Nombre del usuario  -->
-<div class="mb-3">
-<label for="nameInput" class="form-label label-custom"></label>
-<input type="text" class="form-control input-custom" id="nameInput" placeholder="Escribe tu nombre" required name="nameInput">
-</div>
 
-   <!-- Número de teléfono  -->
-
-<div class="mb-3">
-<label for="numeroTel" class="form-label label-custom"></label>
-<input type="number" class="form-control input-custom" id="numeroTel" placeholder="Escribe tu número de Teléfono" name="numeroTel" required>
-</div>
 
    <!-- Email  -->
 <div class="mb-3">
@@ -117,25 +108,33 @@
     <label for="password" class="form-label label-custom"></label>
     <input type="password" class="form-control input-custom" id="password" placeholder="Escribe tu contraseña" name="password" required>
     </div>
-   <div class="mb-3">
-    <label for="password2" class="form-label label-custom"></label>
-    <input type="password" class="form-control input-custom" id="password2" placeholder="Vuelve a escribir tu contraseña" name="password2" required>
-    </div>
-    <!-- espacio de alerta de error cuando las contraseñas coincidem-->
+ 
+    <!-- espacio de alerta de error cuando las contraseñas no coincide-->
 <div id="errorMessage" style="color: red;"></div>
 
 
 <div id="messageIncluded"></div>
 
                              <!-- Botón del formulario -->  
-<button  type="submit" class="btn btn-primary btn-custom button" id="alertMessage" onclick="registrarUsuario()">Crear perfil</button>
+<button  type="submit" class="btn btn-primary btn-custom button" id="alertMessage">Ingresa a tu perfil</button>
+
+<article class="optForm">
+  <div class="optForm-pass">
+    <a href="#">¿Olvidaste tu contraseña?</a>
+  </div>
+   <div class="optForm-new">
+    <p>¿Nuevo por aquí? <a href="#">Crea una cuenta y comienza a diseñar el chasis de tus sueños.</a></p>
+    
+   </div>
+  
+</article>
 </form>
 
 
 
     </article>
     <article class="col form-col3">
-      <img src="../pics/creacion-perfil-2.png" alt="">
+      <img src="../pics/inicio-sesion2.png" alt="">
     </article>
 
   </section>
@@ -177,7 +176,7 @@
     </div>
   
   </section>
-  
+  x
   </footer>
 
 
@@ -192,6 +191,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="../js/formularioProductos.js"></script>
-  <script src="../js/registro-usuario.js"></script>
+  <script src="../js/iniciar-sesion.js"></script>
 </body>
 </html>
