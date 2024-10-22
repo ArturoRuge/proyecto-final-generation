@@ -28,6 +28,11 @@ document.getElementById('infoForm').addEventListener('submit', function (e) {
       errors.push('El correo electrónico no es válido.');
     }
   
+
+    //validar passwordr
+
+
+
     // Contraseñas coincidn
     if (password === '') {
       errors.push('La contraseña es requerida.');
@@ -61,6 +66,8 @@ localStorage.setItem('usuarios', JSON.stringify(usuarios));
       alert('Usuario registrado exitosamente');
       //Resetea el formulario
       document.getElementById('infoForm').reset();
+      // Redirigir a la página de inicio
+      window.location.href = 'iniciar-sesion.html';
     }
   });
   

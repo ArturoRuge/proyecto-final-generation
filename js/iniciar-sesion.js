@@ -47,7 +47,7 @@ const usuarioEncontrado = usuarios.find(usuario => usuario.email === email && pa
         alert(`Bienvenido, ${email.split('@')[0]}`);
         
         // Redirigir a la página de inicio
-        window.location.href = 'inicio.html';
+        window.location.href = 'carrito-compra.html';
       }
 
   } else {

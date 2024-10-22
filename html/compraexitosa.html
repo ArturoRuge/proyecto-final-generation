@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos a Chasis Factory</title>
+    <title>Carrito de compra Chasis Factory</title>
       <!-- Google Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +21,7 @@
       <link rel="stylesheet" href="../css/styles.css">
       <link rel="stylesheet" href="../css/contactenos.css">
       <link rel="stylesheet" href="../css/chasis.css">
+      <link rel="stylesheet" href="../css/carrito-compras.css">
     
     </head>
 </head>
@@ -74,95 +75,84 @@
 <!-- DETALLES PRODUCTO -->
 
     <div class="container producto">
-     
+        <h1>Detalles de tu pedido</h1>
       <div class="row"> 
-          <div class="col-12 col-xl-6">
-                  <!-- <img src="../pics/chasis/chasis1.jpg" class="card-img-top" alt="ilustracion del servicio de chasis personzalizado">      
-                       -->
+        
+        <div class="col-12 col-xl-3 detalles-pedido">
+           
+            <div class="imagen">
+                <img src="../pics/chasis/chasis1.jpg" class="card-img-top" alt="ilustracion del servicio de chasis personzalizado">
+            </div>
+                      
+        </div>
 
-                       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="../pics/chasis/chasis1.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../pics/chasis/chasis2.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../pics/chasis/chasis3.jpg" class="d-block w-100" alt="...">
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-           </div>
-  
-           <div class="col-12 col-xl-6">
-             <h1>Personaliza tu chasis Vortex RGB </h1>
-             <p>Con iluminación personalizable y un diseño futurista, el chasis Vortex RGB te ofrece estilo y funcionalidad en un solo paquete. Ideal para equipos de alto rendimiento.</p>
+        <div class="col-12 col-xl-3 detalles-pedido">
+            <div class="descripcion">
+                
+                <h2>Chasis Vortex RGB</h2>
+ 
+                <p><strong>Color:</strong>  Blanco Puro</p>
+                <p><strong>Tamaño:</strong>  M ATX estándar</p>
+                <p><strong>Iluminación:</strong>  Tiras LED RGB</p>
+                <p><strong>Ventilación:</strong>  Refrigeración liquida personalizada</p>
+                <p><strong>Cantidad: </strong> 1</p>
 
-            <div class="color">
-             <p>Color</p>
-             <div class="colores">
-                <div class="color1"></div>
-                <div class="color2"></div>
-                <div class="color3"></div>
-                <div class="color4"></div>
-             </div>
+                <p class="eliminar"><a href="tienda.html">VOLVER</a><a href="#">Eliminar X</a></p>
+
+                <hr>
+
+          </div>
             </div>
 
+            <!-- DATOS ENVIO -->
 
-            <div class="tamano">
-              <p>Tamaño</p>
-              <div class="tamanos">
-                <span>XS</span>
-              <span>S</span>
-              <span>M</span>
-              <span>L</span>
-              </div>
-            </div>
-
-            <div class="iluminacion">
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Ventilación y refrigeración</option>
-                <option value="1">Ventilación por Aire con Ventiladores de Caja</option>
-                <option value="2">Refrigeración Líquida AIO (All-in-One)</option>
-                <option value="3">Refrigeración Líquida Personalizada (Custom Loop)</option>
-              </select>
-            </div>
-
-            <div class="ventilacion">
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Selecciona la iluminación</option>
-                <option value="1">Tiras LED RGB direccionables</option>
-                <option value="2">Ventiladores con iluminación RGB</option>
-                <option value="3">Bloques de refrigeración líquida con RGB integrados</option>
-              </select>
-            </div>
-
-            <div class="input-group">
-              <span class="input-group-text">Cantidad</span>
-              <input type="number" class="input-number" min="1" max="20">
-            </div>
-
-            <div class="botones">
-              <a href="#" class="buttonp agregar">Agregar al carrito</a>
-              <a href="carrito-compra.html" class="buttonp comprar">Comprar</a>
-            </div>
+           <div class="col-12 col-xl-5 orden">
+            <h3>¡Hemos recibido tu oden!</h3>
+            <img src="../pics/compra-exitosa.png" alt="">
             
-            <div class="mas-info">
-              <a href="#">Precios de envio</a>
-              <a href="#">Guias de tamaño</a>
-              <a href="#">Polizas de retorno</a>
-            </div>
 
            </div>
+
+
+           <div class="row fila2">
+            <!-- INFO ESTRA ORDEN -->
+            <div class="col-12 col-xl-6 detalles-pedido">
+              <div class="informacion">
+                  
+                  <h4>Información de tu Orden</h4>
+                  <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          Política de retorno
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">En nuestra tienda, la satisfacción del cliente es nuestra prioridad. Si no estás completamente satisfecho con tu compra, puedes solicitar una devolución dentro de los primeros 30 días a partir de la fecha de entrega. El producto debe estar en su empaque original y sin señales de uso para poder procesar el reembolso. Ten en cuenta que algunos artículos personalizados podrían no ser elegibles para devoluciones. Para iniciar el proceso, contáctanos a través de nuestro servicio al cliente, y te proporcionaremos instrucciones detalladas. Los costos de envío de retorno serán responsabilidad del cliente, salvo en casos de defectos de fabricación o errores en el pedido.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          Opciones de envío
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Ofrecemos varias opciones de envío para adaptarnos a tus necesidades. Los pedidos estándar se procesan y envían dentro de los 2-5 días hábiles, y la entrega puede variar dependiendo de tu ubicación. También contamos con opciones de envío rápido, para aquellos que deseen recibir su pedido en un plazo de 1-2 días hábiles. Todos nuestros envíos incluyen un número de seguimiento para que puedas monitorear tu pedido en tiempo real. Asegúrate de verificar las tarifas y tiempos estimados de entrega al momento de finalizar tu compra.</div>
+                      </div>
+                    </div>
+                  </div>
+
+
+            </div>
+            </div>
+
+      
+
+          </div>
+
+
+
       </div>
       
      </div>
@@ -205,11 +195,13 @@
 </footer>
 
 
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
     <script src="../js/usuarioLogueado.js"></script>
-    <script src="../js/usuarioLogueado.js"></script>
+    <script src="../js/realizar-pago.js"></script>
 </body>
 </html>

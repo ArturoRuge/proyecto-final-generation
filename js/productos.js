@@ -74,7 +74,7 @@ class Producto {
         productoData.imagen,
         productoData.descripcion,
         productoData.precio,
-        // productoData.link
+        productoData.link
       );
       const card = producto.crearCard();
       contenedor.appendChild(card); 

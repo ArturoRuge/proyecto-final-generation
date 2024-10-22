@@ -12,6 +12,11 @@ body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+p{
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(33, 37, 41, 0.75);
+}
 
 
 /* Estilos para la barra superior */
@@ -185,6 +190,7 @@ z-index: 5;
   margin: 18px;
 }
 .footer{
+  margin-top: 200px ;
   text-align: center;
   width: 100%;
 }
@@ -222,8 +228,26 @@ button[aria-expanded="true"]{
   background-color:#B5EAD7 ;
 }
 
-
-
+.buttonp{
+  padding: 18px;
+  margin-left: 18px;
+  background-color: #B5EAD7;
+  border: none;
+  border-radius: 25px ;
+  text-decoration: none;
+  color: #5C5C5C;
+  font-size: 1.2rem;
+}
+.buttonp:hover{
+  color: #5C5C5C;
+  font-weight: 600;
+}
+.ocultar{
+  display: none;
+}
+.mostrar{
+  display:block;
+}
 /* Media Queries */
 @media (max-width: 768px) {
     .card {
@@ -246,6 +270,10 @@ button[aria-expanded="true"]{
     .footer-email-input{
       width: 60%;
     }
+    .top-bar a{
+      display: none;
+    }
+
 }
 
 @media (max-width: 480px) {
