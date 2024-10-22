@@ -4,6 +4,8 @@ document.getElementById('infoForm').addEventListener('submit', function (e) {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const errorMessage = document.getElementById('errorMessage');
+    const succesMessage = document.getElementById('messageIncluded');
+
     let errors = [];
   
     errorMessage.innerHTML = '';
@@ -37,17 +39,19 @@ const usuarioEncontrado = usuarios.find(usuario => usuario.email === email && pa
 
       // Si el usuario es administrador
       if (email === 'admin@chasisfactory.com') {
-        alert('Bienvenido, Administrador');
+        // alert('Bienvenido, Administrador');
+        succesMessage.innerText = `Bienvenido administrador, vas a ser redirigido a la página de cargar nuevo producto`;
         
         // Redirigir a la página del administrador
-        window.location.href = 'ingresarProducto.html';
+        setTimeout("window.location.href = 'ingresarProducto.html'", 4000);;
 
       } else {
         // Si es un usuario común
-        alert(`Bienvenido, ${email.split('@')[0]}`);
+        // alert(`Bienvenido, ${email.split('@')[0]}`);
+        succesMessage.innerText = `Bienvenido ${email.split('@')[0]}, vas a ser redirigido a tu orden de compra`;
         
         // Redirigir a la página de inicio
-        window.location.href = 'carrito-compra.html';
+        setTimeout("window.location.href = 'carrito-compra.html'", 4000);
       }
 
   } else {

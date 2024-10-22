@@ -7,6 +7,7 @@ document.getElementById('infoForm').addEventListener('submit', function (e) {
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('password2').value;
     const errorMessage = document.getElementById('errorMessage');
+    const succesMessage = document.getElementById('messageIncluded');
     let errors = [];
   
     errorMessage.innerHTML = '';
@@ -62,12 +63,16 @@ usuarios.push(nuevoUsuario);
 
 // Almacenar el array de usuarios en localStorage
 localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
-      alert('Usuario registrado exitosamente');
+      
+      succesMessage.innerText = 'Usuario registrado exitosamente, vas a ser redirigido a la página de inicio de sesión';
       //Resetea el formulario
       document.getElementById('infoForm').reset();
-      // Redirigir a la página de inicio
-      window.location.href = 'iniciar-sesion.html';
+      // Redirigir a la página del administrador
+      setTimeout("window.location.href = 'iniciar-sesion.html'", 4000);;
+
+
+
+
     }
   });
   
