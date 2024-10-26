@@ -1,0 +1,122 @@
+CREATE DATABASE IF NOT EXISTS BDChasysFactory;
+USE BDChasysFactory;
+
+CREATE TABLE usuarioRegistrado (
+    idUsuarioRegistrado INT(10) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    nombreApellido VARCHAR(50) NOT NULL,
+    numeroCelular VARCHAR(10) NOT NULL,
+    correo VARCHAR(50) NOT NULL,
+    contraseña VARCHAR(10) NOT NULL,
+    confirmacionContraseña VARCHAR(10) NOT NULL,
+    logueado BOOLEAN
+);
+
+
+CREATE TABLE pedido (
+    idPedido INT(10) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    fechaPedido DATETIME,
+    estadoPedido VARCHAR(50),
+    totalPrecio DECIMAL(10,2),
+    idUsuarioRegistrado INT(10) NOT NULL,
+    direccionPedido VARCHAR(50),
+    ciudadPedido VARCHAR(50),
+    departamentoPedido VARCHAR(50),
+    detallesAdiccionalesPedido VARCHAR(100),
+    FOREIGN KEY (idUsuarioRegistrado) REFERENCES usuarioRegistrado(idUsuarioRegistrado)
+);
+
+CREATE TABLE producto (
+    idProducto INT(10) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    nombreProducto VARCHAR(50) NOT NULL,
+    descripcionProducto VARCHAR(500),
+    precioProducto DECIMAL(10,2) NOT NULL,
+    imagenProducto BLOB,
+    color VARCHAR(50),
+    iluminacion VARCHAR(50),
+    refrigeracion VARCHAR(50),
+    tamañoChasis CHAR(10),
+    stock INT(10)
+);
+
+
+CREATE TABLE detallePedido (
+    idDetallePedido INT(10) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    cantidadProducto INT(10),
+    precioProducto DECIMAL(10,2),
+    idPedido INT(10) NOT NULL,
+    idProducto INT(10) NOT NULL,
+    FOREIGN KEY (idPedido) REFERENCES pedido(idPedido),
+    FOREIGN KEY (idProducto) REFERENCES producto(idProducto)
+);
+
+
+
+CREATE TABLE contactanos (
+    idContacto INT(10) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    nombreApellido VARCHAR(50) NOT NULL,
+    correoContacto VARCHAR(50) NOT NULL,
+    telefonoContacto VARCHAR(50),
+    mensajeContacto VARCHAR(500) NOT NULL
+);
+
+
+CREATE TABLE boletinInformativo (
+    idBoletin INT(10) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    correoBoletin VARCHAR(50)
+);
+
+
+
+-- Registros para la tabla usuarioRegistrado
+INSERT INTO usuarioRegistrado (nombreApellido, numeroCelular, correo, contraseña, confirmacionContraseña, logueado)
+VALUES 
+('Carlos Perez', '3001234567', 'carlos.perez@example.com', 'pass1234', 'pass1234', TRUE),
+('Ana Gomez', '3129876543', 'ana.gomez@example.com', 'password', 'password', FALSE),
+('Luis Martinez', '3217654321', 'luis.martinez@example.com', 'secret12', 'secret12', TRUE),
+('Maria Lopez', '3012345678', 'maria.lopez@example.com', 'qwerty12', 'qwerty12', TRUE),
+('Juan Alvarez', '3209876543', 'juan.alvarez@example.com', '12345abc', '12345abc', FALSE);
+
+-- Registros para la tabla pedido
+INSERT INTO pedido (fechaPedido, estadoPedido, totalPrecio, idUsuarioRegistrado, direccionPedido, ciudadPedido, departamentoPedido, detallesAdiccionalesPedido)
+VALUES 
+('2024-10-01 12:30:00', 'En Proceso', 150.50, 1, 'Calle 123 #45-67', 'Bogotá', 'Cundinamarca', 'Entregar en la portería'),
+('2024-10-02 09:15:00', 'Entregado', 200.00, 2, 'Carrera 54 #32-12', 'Medellín', 'Antioquia', 'Paquete frágil'),
+('2024-10-03 17:45:00', 'Cancelado', 50.75, 3, 'Avenida Siempreviva 742', 'Cali', 'Valle del Cauca', ''),
+('2024-10-04 11:00:00', 'Pendiente', 300.00, 4, 'Carrera 7 #123-45', 'Bogotá', 'Cundinamarca', ''),
+('2024-10-05 15:20:00', 'Enviando', 120.00, 5, 'Calle 45 #98-23', 'Cartagena', 'Bolívar', 'Entrega urgente');
+
+-- Registros para la tabla producto
+INSERT INTO producto (nombreProducto, descripcionProducto, precioProducto, imagenProducto, color, iluminacion, refrigeracion, tamañoChasis, stock)
+VALUES 
+('Chasis Gaming X1', 'Chasis de alta calidad con ventilación avanzada', 250.00, NULL, 'Negro', 'LED Azul', 'Sí', 'Grande', 20),
+('Chasis Económico Y2', 'Chasis compacto para equipos básicos', 100.00, NULL, 'Blanco', 'No', 'No', 'Mediano', 15),
+('Chasis Premium Z3', 'Chasis con diseño elegante y espacio amplio', 350.00, NULL, 'Negro', 'LED RGB', 'Sí', 'Grande', 10),
+('Chasis Compacto W4', 'Chasis pequeño ideal para oficinas', 75.00, NULL, 'Gris', 'No', 'No', 'Pequeño', 25),
+('Chasis Medio Q5', 'Chasis versátil para varios tipos de equipos', 150.00, NULL, 'Rojo', 'LED Verde', 'Sí', 'Mediano', 30);
+
+-- Registros para la tabla detallePedido
+INSERT INTO detallePedido (cantidadProducto, precioProducto, idPedido, idProducto)
+VALUES 
+(2, 250.00, 1, 1),
+(1, 100.00, 2, 2),
+(3, 75.00, 3, 4),
+(1, 350.00, 4, 3),
+(2, 150.00, 5, 5);
+
+-- Registros para la tabla contactanos
+INSERT INTO contactanos (nombreApellido, correoContacto, telefonoContacto, mensajeContacto)
+VALUES 
+('Pedro Reyes', 'pedro.reyes@example.com', '3012345678', 'Consulta sobre disponibilidad de productos'),
+('Luisa Hernandez', 'luisa.hernandez@example.com', '3123456789', 'Solicito información sobre envíos'),
+('Camila Diaz', 'camila.diaz@example.com', '3201234567', 'Consulta sobre garantía de productos'),
+('Miguel Castro', 'miguel.castro@example.com', '3109876543', 'Solicitud de cotización para grandes volúmenes'),
+('Laura Jimenez', 'laura.jimenez@example.com', '3112345678', 'Pregunta sobre métodos de pago');
+
+-- Registros para la tabla boletinInformativo
+INSERT INTO boletinInformativo (correoBoletin)
+VALUES 
+('newsletter1@example.com'),
+('newsletter2@example.com'),
+('newsletter3@example.com'),
+('newsletter4@example.com'),
+('newsletter5@example.com');
